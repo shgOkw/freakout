@@ -1,0 +1,534 @@
+@charset "UTF-8";
+#about .content,
+#career .content,
+#skill .content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+#about {
+  position: relative;
+}
+
+#about .inner {
+  padding-top: 16%;
+  padding-bottom: 9%;
+}
+
+#about .inner .detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+#about .inner .detail .photo-box {
+  width: 30%;
+  border: 6px solid rgba(255, 255, 255, 0.01);
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 0px 0px rgba(255, 255, 255, 0.4), 0px 1px 0px rgba(255, 255, 255, 0.4), -1px 0px 0px rgba(255, 255, 255, 0.4), 0px -1px 0px rgba(255, 255, 255, 0.4);
+          box-shadow: 1px 0px 0px rgba(255, 255, 255, 0.4), 0px 1px 0px rgba(255, 255, 255, 0.4), -1px 0px 0px rgba(255, 255, 255, 0.4), 0px -1px 0px rgba(255, 255, 255, 0.4);
+}
+
+#about .inner .detail .photo-box .photo-thmb {
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.12);
+}
+
+#about .inner .detail .photo-box .photo-thmb .thmb {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(15deg);
+          transform: translate(-50%, -50%) rotate(15deg);
+}
+
+#about .inner .detail .photo-box .photo-thmb:hover {
+  opacity: 1;
+}
+
+#about .inner .detail .photo-box .photo-thmb .btn-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#about .inner .detail .photo-box .photo-thmb .btn-text span,
+#about .inner .detail .photo-box .photo-thmb .btn-text .icon {
+  display: block;
+}
+
+#about .inner .detail .photo-box .photo-thmb .btn-text span {
+  color: #0eefff;
+  font-weight: 400;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.486);
+}
+
+#about .inner .detail .photo-box .photo-thmb .btn-text .icon {
+  width: 15px;
+  height: auto;
+  margin: 4px 0 0px 5px;
+}
+
+#about .inner .detail .photo-box .photo-thmb .btn-text:hover {
+  background-color: rgba(14, 239, 255, 0.13);
+}
+
+#about .inner .detail .photo-box .photo-thmb .btn-text:hover span,
+#about .inner .detail .photo-box .photo-thmb .btn-text:hover .icon {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#about .inner .detail .prof-box {
+  width: 66%;
+}
+
+#about .inner .detail .prof-box .name-area {
+  line-height: 1.7;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#about .inner .detail .prof-box .name-area::after {
+  content: '';
+  width: 120%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#about .inner .detail .prof-box .name-area span {
+  display: block;
+}
+
+#about .inner .detail .prof-box .name-area .role {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+}
+
+#about .inner .detail .prof-box .name-area .name {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#about .inner .detail .prof-box .text-area .enjoy div {
+  padding: 0.5em 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about .inner .detail .prof-box .text-area .enjoy dt {
+  font-size: 14px;
+  font-weight: 100;
+  width: 100px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.13);
+  font-size: 13px;
+  border-radius: 2px;
+  display: block;
+  padding: 0.2em 0;
+  margin-right: 1em;
+  letter-spacing: 0.1em;
+}
+
+.my-gallery figure {
+  display: none;
+}
+
+.my-gallery figure.trigger {
+  display: block;
+}
+
+.my-gallery figure.trigger figcaption {
+  display: none;
+}
+
+.pswp .pswp__bg {
+  -webkit-backdrop-filter: blur(3px) !important;
+          backdrop-filter: blur(3px) !important;
+}
+
+.pswp .pswp__ui--fit .pswp__top-bar,
+.pswp .pswp__ui--fit .pswp__caption {
+  background-color: transparent;
+}
+
+.pswp .pswp__caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 25%;
+}
+
+.pswp .pswp__caption__center {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 2em 1em;
+  font-size: 1.1em;
+  font-weight: 400;
+  width: 50%;
+  max-width: none;
+  text-align: center;
+}
+
+.pswp .pswp__caption__center::before {
+  content: '＃';
+  opacity: 0.6;
+  font-size: 1.4em;
+  font-weight: 100;
+  font-style: italic;
+  -webkit-transform: translateY(0.1em);
+          transform: translateY(0.1em);
+  display: inline-block;
+}
+
+.pswp .pswp__caption__center span {
+  display: block;
+  font-size: 0.8em;
+  font-weight: 300;
+  text-align: right;
+  padding-top: 1em;
+  letter-spacing: 0.1em;
+  opacity: 0.8;
+}
+
+.pswp .pswp__caption__center span::before {
+  content: '＠';
+  display: inline-block;
+  padding-right: 0.2em;
+}
+
+.pswp .pswp__counter {
+  font-size: 1em;
+  font-weight: 100;
+}
+
+.pswp .pswp__top-bar {
+  height: auto;
+  top: 2%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 98%;
+}
+
+.pswp .pswp__button--arrow--left,
+.pswp .pswp__button--arrow--right {
+  height: auto;
+}
+
+.pswp .pswp__button--arrow--right::before,
+.pswp .pswp__button--arrow--left::before {
+  background: url(../image/common/footer/toTop.svg) no-repeat center !important;
+  background-size: 30% !important;
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  margin-top: -30px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.pswp .pswp__button--arrow--left::before {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+#career h2 {
+  margin-bottom: -28px;
+}
+
+#career .inner {
+  padding-top: 0;
+  padding-bottom: 8%;
+}
+
+#career .content {
+  position: relative;
+}
+
+#career .career-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 9;
+  position: relative;
+}
+
+#career .career-area tbody {
+  width: 48%;
+  z-index: 9;
+  position: relative;
+  padding-top: 91px;
+}
+
+#career .career-area tbody .title .date {
+  width: 85px;
+  text-align: right;
+  padding-right: 1em;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+#career .career-area tbody .title .com-name {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+#career .career-area tbody .detail .empty {
+  background-color: transparent;
+}
+
+#career .career-area tbody .detail .text {
+  position: relative;
+  padding: 0.7em 0 0.7em 1.43em;
+}
+
+#career .career-area tbody .detail .text::after {
+  content: '';
+  width: 1px;
+  height: 84%;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  top: 50%;
+  left: 0.43em;
+  -webkit-transform: translateY(-49%);
+          transform: translateY(-49%);
+}
+
+#career .career-area tbody .detail .text p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+#career .career-area tbody::before, #career .career-area tbody::after {
+  content: '01';
+  width: 100%;
+  height: 113px;
+  line-height: 98px;
+  text-align: center;
+  font-size: 145px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  font-style: italic;
+}
+
+#career .career-area tbody::after {
+  content: '02';
+}
+
+#career .career-area tbody.season-01::after {
+  display: none;
+}
+
+#career .career-area tbody.season-02 {
+  margin-top: 35px;
+}
+
+#career .career-area tbody.season-02::before {
+  display: none;
+}
+
+#career .season-on-off {
+  position: relative;
+}
+
+#career .season-on-off::after {
+  content: '';
+  width: 1px;
+  height: 84%;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  left: 0.43em;
+}
+
+#career .season-on-off.on::after {
+  top: -30px;
+}
+
+#career .season-on-off.off::after {
+  top: 35px;
+}
+
+#skill .inner {
+  padding-top: 3%;
+  padding-bottom: 12%;
+}
+
+#skill .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#skill .skill-list {
+  width: 47.5%;
+}
+
+#skill .skill-list .box {
+  padding-bottom: 25px;
+}
+
+#skill .skill-list .box .name-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#skill .skill-list .box .name-area .icon {
+  width: auto;
+  height: 17px;
+  padding-right: 0.5em;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  opacity: 0.5;
+}
+
+#skill .skill-list .box .name-area .name {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+}
+
+#skill .skill-list .box .skill-parameter {
+  width: 100%;
+  margin-top: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#skill .skill-list .box .skill-parameter span {
+  display: block;
+  width: 9%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  opacity: 0.2;
+}
+
+#skill .skill-list .box .skill-parameter.num1 span:nth-child(1) {
+  opacity: 1;
+}
+
+#skill .skill-list .box .skill-parameter.num2 span:nth-child(1), #skill .skill-list .box .skill-parameter.num2 span:nth-child(2) {
+  opacity: 1;
+}
+
+#skill .skill-list .box .skill-parameter.num3 span:nth-child(1), #skill .skill-list .box .skill-parameter.num3 span:nth-child(2), #skill .skill-list .box .skill-parameter.num3 span:nth-child(3) {
+  opacity: 1;
+}
+
+#skill .skill-list .box .skill-parameter.num4 span:nth-child(1), #skill .skill-list .box .skill-parameter.num4 span:nth-child(2), #skill .skill-list .box .skill-parameter.num4 span:nth-child(3), #skill .skill-list .box .skill-parameter.num4 span:nth-child(4) {
+  opacity: 1;
+}
+
+#skill .skill-list .box .skill-parameter.num5 span:nth-child(1), #skill .skill-list .box .skill-parameter.num5 span:nth-child(2), #skill .skill-list .box .skill-parameter.num5 span:nth-child(3), #skill .skill-list .box .skill-parameter.num5 span:nth-child(4), #skill .skill-list .box .skill-parameter.num5 span:nth-child(5) {
+  opacity: 1;
+}
+
+#skill .skill-list .box .skill-parameter.num6 span:nth-child(1), #skill .skill-list .box .skill-parameter.num6 span:nth-child(2), #skill .skill-list .box .skill-parameter.num6 span:nth-child(3), #skill .skill-list .box .skill-parameter.num6 span:nth-child(4), #skill .skill-list .box .skill-parameter.num6 span:nth-child(5), #skill .skill-list .box .skill-parameter.num6 span:nth-child(6) {
+  opacity: 1;
+}
+
+#skill .skill-list .box .skill-parameter.num7 span:nth-child(1), #skill .skill-list .box .skill-parameter.num7 span:nth-child(2), #skill .skill-list .box .skill-parameter.num7 span:nth-child(3), #skill .skill-list .box .skill-parameter.num7 span:nth-child(4), #skill .skill-list .box .skill-parameter.num7 span:nth-child(5), #skill .skill-list .box .skill-parameter.num7 span:nth-child(6), #skill .skill-list .box .skill-parameter.num7 span:nth-child(7) {
+  opacity: 1;
+}
+
+#skill .skill-list .box .skill-parameter.num8 span:nth-child(1), #skill .skill-list .box .skill-parameter.num8 span:nth-child(2), #skill .skill-list .box .skill-parameter.num8 span:nth-child(3), #skill .skill-list .box .skill-parameter.num8 span:nth-child(4), #skill .skill-list .box .skill-parameter.num8 span:nth-child(5), #skill .skill-list .box .skill-parameter.num8 span:nth-child(6), #skill .skill-list .box .skill-parameter.num8 span:nth-child(7), #skill .skill-list .box .skill-parameter.num8 span:nth-child(8) {
+  opacity: 1;
+}
+
+#skill .skill-list .box .skill-parameter.num9 span:nth-child(1), #skill .skill-list .box .skill-parameter.num9 span:nth-child(2), #skill .skill-list .box .skill-parameter.num9 span:nth-child(3), #skill .skill-list .box .skill-parameter.num9 span:nth-child(4), #skill .skill-list .box .skill-parameter.num9 span:nth-child(5), #skill .skill-list .box .skill-parameter.num9 span:nth-child(6), #skill .skill-list .box .skill-parameter.num9 span:nth-child(7), #skill .skill-list .box .skill-parameter.num9 span:nth-child(8), #skill .skill-list .box .skill-parameter.num9 span:nth-child(9) {
+  opacity: 1;
+}
+
+#skill .skill-list .box .skill-parameter.num10 span:nth-child(1), #skill .skill-list .box .skill-parameter.num10 span:nth-child(2), #skill .skill-list .box .skill-parameter.num10 span:nth-child(3), #skill .skill-list .box .skill-parameter.num10 span:nth-child(4), #skill .skill-list .box .skill-parameter.num10 span:nth-child(5), #skill .skill-list .box .skill-parameter.num10 span:nth-child(6), #skill .skill-list .box .skill-parameter.num10 span:nth-child(7), #skill .skill-list .box .skill-parameter.num10 span:nth-child(8), #skill .skill-list .box .skill-parameter.num10 span:nth-child(9), #skill .skill-list .box .skill-parameter.num10 span:nth-child(10) {
+  opacity: 1;
+}
+/*# sourceMappingURL=about.css.map */
