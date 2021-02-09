@@ -5,12 +5,13 @@ $catImageSize: 22%;
 $userImageSize: 160px;
 
 //breakpoint
-$bpMobile: 767px;
-@mixin max-screen($break-point) {
-  @media screen and (max-width: $break-point) {
-    @content;
-  }
-}
+// $bpMobile: 767px;
+// @mixin max-screen($break-point) {
+//   @media screen and (max-width: $break-point) {
+//     @content;
+//   }
+// }
+@import 'breakpoint';
 
 /* --------------------------------------------------------------------------------
 pointer
@@ -266,6 +267,9 @@ h2 {
   margin-bottom: 30px;
   @include max-screen($bpMobile) {
     font-size: 8vw;
+    margin-bottom: 6%;
+    z-index: 12;
+    position: relative;
   }
 }
 

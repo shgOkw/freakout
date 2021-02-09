@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import 'breakpoint';
+
 #about,
 #career,
 #skill {
@@ -10,8 +12,6 @@
 }
 
 #about {
-  // background: url(../image/common/bg/main-image.jpg) center no-repeat;
-  // background-size: cover;
   position: relative;
   .inner {
     padding-top: 16%;
@@ -121,6 +121,9 @@
           .name {
             font-size: 20px;
             font-weight: 500;
+            .eng {
+              display: inline;
+            }
           }
         }
         .text-area {
@@ -144,12 +147,79 @@
               margin-right: 1em;
               letter-spacing: 0.1em;
             }
+            dd {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include max-screen($bpMobile) {
+    .inner {
+      padding-top: 22%;
+      padding-bottom: 10%;
+      .detail {
+        display: block;
+        position: relative;
+        .photo-box {
+          width: 30%;
+          position: absolute;
+          border-width: 3px;
+          top: 0;
+          right: 0;
+          z-index: 9;
+          transform: translate(-14%, -14%);
+          .photo-thmb {
+            .btn-text {
+              span {
+                font-size: 2vw;
+              }
+              .icon {
+                width: 2.4vw;
+                margin: 0 0 0 1vw;
+              }
+            }
+          }
+        }
+        .prof-box {
+          width: 100%;
+          .name-area {
+            padding-bottom: 4%;
+            margin-bottom: 4%;
+            &::after {
+              width: 100%;
+            }
+            span {
+              display: block;
+            }
+            .role {
+              font-size: 3.4vw;
+            }
+            .name {
+              font-size: 4.2vw;
+              .eng {
+                display: inline;
+                font-size: 3.7vw;
+              }
+            }
+          }
+          .text-area {
+            .enjoy {
+              dt {
+                width: 70px;
+                padding: 0.2em 0;
+                font-size: 12px;
+              }
+            }
           }
         }
       }
     }
   }
 }
+
 .my-gallery {
   figure {
     display: none;
@@ -161,6 +231,7 @@
     }
   }
 }
+
 .pswp {
   .pswp__bg {
     // background-color: rgba(0, 0, 0, 0.7);
@@ -241,6 +312,31 @@
   .pswp__button--arrow--left {
     &::before {
       transform: rotate(-90deg);
+    }
+  }
+
+  @include max-screen($bpMobile) {
+    .pswp__caption {
+      height: 25%;
+    }
+    .pswp__caption__center {
+      padding: 1.5em 0.4em;
+      font-size: 1em;
+      width: 88%;
+      &::before {
+        font-size: 1.2em;
+      }
+      span {
+        padding-top: 0.5em;
+      }
+    }
+    .pswp__button--arrow--right,
+    .pswp__button--arrow--left {
+      &::before {
+        width: 35px;
+        height: 35px;
+        margin-top: -17px;
+      }
     }
   }
 }
@@ -355,10 +451,76 @@
       top: 35px;
     }
   }
+  @include max-screen($bpMobile) {
+    h2 {
+      margin-bottom: 6%;
+    }
+    .inner {
+      padding-bottom: 10%;
+    }
+    .career-area {
+      display: block;
+      // margin-top: 13%;
+      tbody {
+        width: 100%;
+        padding-top: 0;
+        .title {
+          .date {
+            vertical-align: top;
+            padding-top: 2px;
+            width: 75px;
+            font-size: 13px;
+            font-weight: 300;
+          }
+          .com-name {
+            font-weight: 400;
+          }
+        }
+        .detail {
+          .text {
+            position: relative;
+            padding: 0.7em 0 0.7em 1.43em;
+            p {
+              font-size: 13px;
+            }
+          }
+        }
+        &::before,
+        &::after {
+          display: none;
+          height: 67px;
+          line-height: 55px;
+          text-align: right;
+          font-size: 85px;
+          top: -22px;
+          left: auto;
+          right: -10px;
+        }
+        &::after {
+          content: '02';
+        }
+        &.season-01 {
+          &::after {
+            display: none;
+          }
+        }
+        &.season-02 {
+          margin-top: 35px;
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+    .season-on-off {
+      &::after {
+        display: none;
+      }
+    }
+  }
 }
 
 #skill {
-  // background-color: #214351;
   .inner {
     padding-top: 3%;
     padding-bottom: 12%;
@@ -515,6 +677,169 @@
             &:nth-child(9),
             &:nth-child(10) {
               opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include max-screen($bpMobile) {
+    .wrap {
+      display: block;
+    }
+    .skill-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-bottom: 8%;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .box {
+        width: 46%;
+        padding-bottom: 10px;
+        .name-area {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          .icon {
+            height: 15px;
+            transform: translateY(0px);
+            padding-right: 0.3em;
+          }
+          .name {
+            font-size: 15px;
+          }
+        }
+        .skill-parameter {
+          width: 100%;
+          margin-top: 3px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          span {
+            display: block;
+            width: 9%;
+            height: 3px;
+            background-color: #fff;
+            border-radius: 2px;
+            opacity: 0.2;
+          }
+          &.num1 {
+            span {
+              &:nth-child(1) {
+                opacity: 1;
+              }
+            }
+          }
+          &.num2 {
+            span {
+              &:nth-child(1),
+              &:nth-child(2) {
+                opacity: 1;
+              }
+            }
+          }
+          &.num3 {
+            span {
+              &:nth-child(1),
+              &:nth-child(2),
+              &:nth-child(3) {
+                opacity: 1;
+              }
+            }
+          }
+          &.num4 {
+            span {
+              &:nth-child(1),
+              &:nth-child(2),
+              &:nth-child(3),
+              &:nth-child(4) {
+                opacity: 1;
+              }
+            }
+          }
+          &.num5 {
+            span {
+              &:nth-child(1),
+              &:nth-child(2),
+              &:nth-child(3),
+              &:nth-child(4),
+              &:nth-child(5) {
+                opacity: 1;
+              }
+            }
+          }
+          &.num6 {
+            span {
+              &:nth-child(1),
+              &:nth-child(2),
+              &:nth-child(3),
+              &:nth-child(4),
+              &:nth-child(5),
+              &:nth-child(6) {
+                opacity: 1;
+              }
+            }
+          }
+          &.num7 {
+            span {
+              &:nth-child(1),
+              &:nth-child(2),
+              &:nth-child(3),
+              &:nth-child(4),
+              &:nth-child(5),
+              &:nth-child(6),
+              &:nth-child(7) {
+                opacity: 1;
+              }
+            }
+          }
+          &.num8 {
+            span {
+              &:nth-child(1),
+              &:nth-child(2),
+              &:nth-child(3),
+              &:nth-child(4),
+              &:nth-child(5),
+              &:nth-child(6),
+              &:nth-child(7),
+              &:nth-child(8) {
+                opacity: 1;
+              }
+            }
+          }
+          &.num9 {
+            span {
+              &:nth-child(1),
+              &:nth-child(2),
+              &:nth-child(3),
+              &:nth-child(4),
+              &:nth-child(5),
+              &:nth-child(6),
+              &:nth-child(7),
+              &:nth-child(8),
+              &:nth-child(9) {
+                opacity: 1;
+              }
+            }
+          }
+          &.num10 {
+            span {
+              &:nth-child(1),
+              &:nth-child(2),
+              &:nth-child(3),
+              &:nth-child(4),
+              &:nth-child(5),
+              &:nth-child(6),
+              &:nth-child(7),
+              &:nth-child(8),
+              &:nth-child(9),
+              &:nth-child(10) {
+                opacity: 1;
+              }
             }
           }
         }

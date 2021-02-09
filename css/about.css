@@ -154,6 +154,10 @@
   font-weight: 500;
 }
 
+#about .inner .detail .prof-box .name-area .name .eng {
+  display: inline;
+}
+
 #about .inner .detail .prof-box .text-area .enjoy div {
   padding: 0.5em 0 0;
   display: -webkit-box;
@@ -179,6 +183,66 @@
   padding: 0.2em 0;
   margin-right: 1em;
   letter-spacing: 0.1em;
+}
+
+#about .inner .detail .prof-box .text-area .enjoy dd {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+  #about .inner {
+    padding-top: 22%;
+    padding-bottom: 10%;
+  }
+  #about .inner .detail {
+    display: block;
+    position: relative;
+  }
+  #about .inner .detail .photo-box {
+    width: 30%;
+    position: absolute;
+    border-width: 3px;
+    top: 0;
+    right: 0;
+    z-index: 9;
+    -webkit-transform: translate(-14%, -14%);
+            transform: translate(-14%, -14%);
+  }
+  #about .inner .detail .photo-box .photo-thmb .btn-text span {
+    font-size: 2vw;
+  }
+  #about .inner .detail .photo-box .photo-thmb .btn-text .icon {
+    width: 2.4vw;
+    margin: 0 0 0 1vw;
+  }
+  #about .inner .detail .prof-box {
+    width: 100%;
+  }
+  #about .inner .detail .prof-box .name-area {
+    padding-bottom: 4%;
+    margin-bottom: 4%;
+  }
+  #about .inner .detail .prof-box .name-area::after {
+    width: 100%;
+  }
+  #about .inner .detail .prof-box .name-area span {
+    display: block;
+  }
+  #about .inner .detail .prof-box .name-area .role {
+    font-size: 3.4vw;
+  }
+  #about .inner .detail .prof-box .name-area .name {
+    font-size: 4.2vw;
+  }
+  #about .inner .detail .prof-box .name-area .name .eng {
+    display: inline;
+    font-size: 3.7vw;
+  }
+  #about .inner .detail .prof-box .text-area .enjoy dt {
+    width: 70px;
+    padding: 0.2em 0;
+    font-size: 12px;
+  }
 }
 
 .my-gallery figure {
@@ -290,6 +354,29 @@
 .pswp .pswp__button--arrow--left::before {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
+}
+
+@media screen and (max-width: 767px) {
+  .pswp .pswp__caption {
+    height: 25%;
+  }
+  .pswp .pswp__caption__center {
+    padding: 1.5em 0.4em;
+    font-size: 1em;
+    width: 88%;
+  }
+  .pswp .pswp__caption__center::before {
+    font-size: 1.2em;
+  }
+  .pswp .pswp__caption__center span {
+    padding-top: 0.5em;
+  }
+  .pswp .pswp__button--arrow--right::before,
+  .pswp .pswp__button--arrow--left::before {
+    width: 35px;
+    height: 35px;
+    margin-top: -17px;
+  }
 }
 
 #career h2 {
@@ -417,6 +504,64 @@
   top: 35px;
 }
 
+@media screen and (max-width: 767px) {
+  #career h2 {
+    margin-bottom: 6%;
+  }
+  #career .inner {
+    padding-bottom: 10%;
+  }
+  #career .career-area {
+    display: block;
+  }
+  #career .career-area tbody {
+    width: 100%;
+    padding-top: 0;
+  }
+  #career .career-area tbody .title .date {
+    vertical-align: top;
+    padding-top: 2px;
+    width: 75px;
+    font-size: 13px;
+    font-weight: 300;
+  }
+  #career .career-area tbody .title .com-name {
+    font-weight: 400;
+  }
+  #career .career-area tbody .detail .text {
+    position: relative;
+    padding: 0.7em 0 0.7em 1.43em;
+  }
+  #career .career-area tbody .detail .text p {
+    font-size: 13px;
+  }
+  #career .career-area tbody::before, #career .career-area tbody::after {
+    display: none;
+    height: 67px;
+    line-height: 55px;
+    text-align: right;
+    font-size: 85px;
+    top: -22px;
+    left: auto;
+    right: -10px;
+  }
+  #career .career-area tbody::after {
+    content: '02';
+  }
+  #career .career-area tbody.season-01::after {
+    display: none;
+  }
+  #career .career-area tbody.season-02 {
+    margin-top: 35px;
+  }
+  #career .career-area tbody.season-02::before {
+    display: none;
+  }
+  #career .season-on-off::after {
+    display: none;
+  }
+}
+
 #skill .inner {
   padding-top: 3%;
   padding-bottom: 12%;
@@ -530,5 +675,104 @@
 
 #skill .skill-list .box .skill-parameter.num10 span:nth-child(1), #skill .skill-list .box .skill-parameter.num10 span:nth-child(2), #skill .skill-list .box .skill-parameter.num10 span:nth-child(3), #skill .skill-list .box .skill-parameter.num10 span:nth-child(4), #skill .skill-list .box .skill-parameter.num10 span:nth-child(5), #skill .skill-list .box .skill-parameter.num10 span:nth-child(6), #skill .skill-list .box .skill-parameter.num10 span:nth-child(7), #skill .skill-list .box .skill-parameter.num10 span:nth-child(8), #skill .skill-list .box .skill-parameter.num10 span:nth-child(9), #skill .skill-list .box .skill-parameter.num10 span:nth-child(10) {
   opacity: 1;
+}
+
+@media screen and (max-width: 767px) {
+  #skill .wrap {
+    display: block;
+  }
+  #skill .skill-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 8%;
+  }
+  #skill .skill-list:last-child {
+    margin-bottom: 0;
+  }
+  #skill .skill-list .box {
+    width: 46%;
+    padding-bottom: 10px;
+  }
+  #skill .skill-list .box .name-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #skill .skill-list .box .name-area .icon {
+    height: 15px;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    padding-right: 0.3em;
+  }
+  #skill .skill-list .box .name-area .name {
+    font-size: 15px;
+  }
+  #skill .skill-list .box .skill-parameter {
+    width: 100%;
+    margin-top: 3px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #skill .skill-list .box .skill-parameter span {
+    display: block;
+    width: 9%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    opacity: 0.2;
+  }
+  #skill .skill-list .box .skill-parameter.num1 span:nth-child(1) {
+    opacity: 1;
+  }
+  #skill .skill-list .box .skill-parameter.num2 span:nth-child(1), #skill .skill-list .box .skill-parameter.num2 span:nth-child(2) {
+    opacity: 1;
+  }
+  #skill .skill-list .box .skill-parameter.num3 span:nth-child(1), #skill .skill-list .box .skill-parameter.num3 span:nth-child(2), #skill .skill-list .box .skill-parameter.num3 span:nth-child(3) {
+    opacity: 1;
+  }
+  #skill .skill-list .box .skill-parameter.num4 span:nth-child(1), #skill .skill-list .box .skill-parameter.num4 span:nth-child(2), #skill .skill-list .box .skill-parameter.num4 span:nth-child(3), #skill .skill-list .box .skill-parameter.num4 span:nth-child(4) {
+    opacity: 1;
+  }
+  #skill .skill-list .box .skill-parameter.num5 span:nth-child(1), #skill .skill-list .box .skill-parameter.num5 span:nth-child(2), #skill .skill-list .box .skill-parameter.num5 span:nth-child(3), #skill .skill-list .box .skill-parameter.num5 span:nth-child(4), #skill .skill-list .box .skill-parameter.num5 span:nth-child(5) {
+    opacity: 1;
+  }
+  #skill .skill-list .box .skill-parameter.num6 span:nth-child(1), #skill .skill-list .box .skill-parameter.num6 span:nth-child(2), #skill .skill-list .box .skill-parameter.num6 span:nth-child(3), #skill .skill-list .box .skill-parameter.num6 span:nth-child(4), #skill .skill-list .box .skill-parameter.num6 span:nth-child(5), #skill .skill-list .box .skill-parameter.num6 span:nth-child(6) {
+    opacity: 1;
+  }
+  #skill .skill-list .box .skill-parameter.num7 span:nth-child(1), #skill .skill-list .box .skill-parameter.num7 span:nth-child(2), #skill .skill-list .box .skill-parameter.num7 span:nth-child(3), #skill .skill-list .box .skill-parameter.num7 span:nth-child(4), #skill .skill-list .box .skill-parameter.num7 span:nth-child(5), #skill .skill-list .box .skill-parameter.num7 span:nth-child(6), #skill .skill-list .box .skill-parameter.num7 span:nth-child(7) {
+    opacity: 1;
+  }
+  #skill .skill-list .box .skill-parameter.num8 span:nth-child(1), #skill .skill-list .box .skill-parameter.num8 span:nth-child(2), #skill .skill-list .box .skill-parameter.num8 span:nth-child(3), #skill .skill-list .box .skill-parameter.num8 span:nth-child(4), #skill .skill-list .box .skill-parameter.num8 span:nth-child(5), #skill .skill-list .box .skill-parameter.num8 span:nth-child(6), #skill .skill-list .box .skill-parameter.num8 span:nth-child(7), #skill .skill-list .box .skill-parameter.num8 span:nth-child(8) {
+    opacity: 1;
+  }
+  #skill .skill-list .box .skill-parameter.num9 span:nth-child(1), #skill .skill-list .box .skill-parameter.num9 span:nth-child(2), #skill .skill-list .box .skill-parameter.num9 span:nth-child(3), #skill .skill-list .box .skill-parameter.num9 span:nth-child(4), #skill .skill-list .box .skill-parameter.num9 span:nth-child(5), #skill .skill-list .box .skill-parameter.num9 span:nth-child(6), #skill .skill-list .box .skill-parameter.num9 span:nth-child(7), #skill .skill-list .box .skill-parameter.num9 span:nth-child(8), #skill .skill-list .box .skill-parameter.num9 span:nth-child(9) {
+    opacity: 1;
+  }
+  #skill .skill-list .box .skill-parameter.num10 span:nth-child(1), #skill .skill-list .box .skill-parameter.num10 span:nth-child(2), #skill .skill-list .box .skill-parameter.num10 span:nth-child(3), #skill .skill-list .box .skill-parameter.num10 span:nth-child(4), #skill .skill-list .box .skill-parameter.num10 span:nth-child(5), #skill .skill-list .box .skill-parameter.num10 span:nth-child(6), #skill .skill-list .box .skill-parameter.num10 span:nth-child(7), #skill .skill-list .box .skill-parameter.num10 span:nth-child(8), #skill .skill-list .box .skill-parameter.num10 span:nth-child(9), #skill .skill-list .box .skill-parameter.num10 span:nth-child(10) {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=about.css.map */

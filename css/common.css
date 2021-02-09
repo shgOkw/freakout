@@ -287,6 +287,9 @@ h2 {
 @media screen and (max-width: 767px) {
   h2 {
     font-size: 8vw;
+    margin-bottom: 6%;
+    z-index: 12;
+    position: relative;
   }
 }
 
