@@ -4,6 +4,15 @@
   font-size: 15px;
 }
 
+@media screen and (max-width: 767px) {
+  .web-closed-text {
+    font-size: 14px;
+    line-height: 1.5;
+    text-indent: -1.1em;
+    padding-left: 1em;
+  }
+}
+
 #works .content {
   max-width: 1200px;
   margin: auto;
@@ -126,7 +135,7 @@
 
 #works .inner .works-content-box .works-detail .project-name {
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.5;
   margin: 14px 0 10px;
 }
 
@@ -136,10 +145,14 @@
 }
 
 #works .inner .works-content-box .works-detail .project-name .project-url {
-  display: inline-block;
+  display: block;
   opacity: 0.7;
   font-size: 14px;
   font-weight: 300;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 #works .inner .works-content-box .works-detail .project-name .project-url:hover {
@@ -259,6 +272,105 @@
   margin: 0;
 }
 
+@media screen and (max-width: 767px) {
+  #works {
+    position: relative;
+  }
+  #works h2 {
+    margin-bottom: 6%;
+  }
+  #works .inner {
+    padding-top: 22%;
+    padding-bottom: 10%;
+    overflow: hidden;
+  }
+  #works .inner .organize-box {
+    padding-bottom: 16%;
+  }
+  #works .inner .organize-box .name-area {
+    padding: 2% 0 3%;
+    margin-bottom: 8%;
+    position: relative;
+    border-bottom: none;
+  }
+  #works .inner .organize-box .name-area::after {
+    content: '';
+    width: 200%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    -webkit-transform: translateX(-6%);
+            transform: translateX(-6%);
+  }
+  #works .inner .organize-box .name-area .organize-name {
+    font-size: 16px;
+  }
+  #works .inner .organize-box .name-area .organize-name .sub {
+    display: block;
+    font-size: 12px;
+    margin-left: 0.1em;
+    margin-top: 0.5em;
+  }
+  #works .inner .works-content-box {
+    display: block;
+    padding: 0 0 12%;
+    margin-bottom: 8%;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+  }
+  #works .inner .works-content-box:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  #works .inner .works-content-box .works-image {
+    width: 100%;
+    margin-bottom: 4%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #works .inner .works-content-box .works-image .mockup {
+    width: 82%;
+  }
+  #works .inner .works-content-box .works-image .mockup.dev-mbl {
+    width: 16%;
+    -webkit-transform: translate(-37%, -11%);
+            transform: translate(-37%, -11%);
+  }
+  #works .inner .works-content-box .works-detail {
+    width: 100%;
+    border: none;
+    padding: 0 6.5%;
+  }
+  #works .inner .works-content-box .works-detail .project-name {
+    margin-top: 10px;
+  }
+  #works .inner .works-content-box .works-detail .project-name span {
+    font-size: 18px;
+  }
+  #works .inner .works-content-box .works-detail .btn-area {
+    margin-top: 6%;
+  }
+  #works .inner .works-content-box .works-detail .btn-area a {
+    margin-bottom: 4%;
+    padding: 2.5% 0;
+  }
+  #works .cat li {
+    font-size: 11px;
+    padding: 0.2em 0.6em 0.3em;
+    margin-bottom: 0;
+  }
+  #works .cat li.period {
+    background: none;
+    font-size: 13px;
+    text-align: left;
+    border-radius: 0;
+    margin: 0;
+  }
+}
+
 .modal-dialog {
   padding: 6%;
   max-width: 1200px;
@@ -330,6 +442,23 @@
   margin-bottom: 0;
 }
 
+@media screen and (max-width: 767px) {
+  .modal-dialog .modal-body .item:last-child {
+    margin-bottom: 8%;
+  }
+  .modal-dialog .modal-body .item h3 span {
+    font-size: 15px;
+  }
+  .modal-dialog .modal-body .item h3 span::before, .modal-dialog .modal-body .item h3 span::after {
+    left: -102vw;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .modal-dialog .modal-body .item h3 span::after {
+    left: auto;
+    right: -102vw;
+  }
+}
+
 .modal-close-btn {
   width: auto;
   text-align: center;
@@ -353,7 +482,7 @@
   display: block;
   opacity: 1;
   text-shadow: none;
-  padding: 0.6em 0;
+  padding: 0.6em 0 0.8em 0.4em;
   width: 200px;
   letter-spacing: 0.07em;
 }
@@ -362,5 +491,17 @@
   background: rgba(137, 0, 0, 0.8);
   -webkit-transform: scale(1.08);
           transform: scale(1.08);
+}
+
+@media screen and (max-width: 767px) {
+  .modal-close-btn {
+    bottom: 2%;
+    right: 3%;
+  }
+  .modal-close-btn span {
+    font-size: 15px;
+    padding: 0.6em 0 0.8em 0.4em;
+    width: 115px;
+  }
 }
 /*# sourceMappingURL=works.css.map */
