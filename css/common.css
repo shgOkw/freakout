@@ -21,6 +21,14 @@ body {
   position: relative;
 }
 
+@media screen and (max-width: 767px) {
+  body {
+    min-width: 0;
+    color: red !important;
+    font-size: 14px;
+  }
+}
+
 * {
   color: #fff;
   background-repeat: no-repeat;
@@ -231,6 +239,13 @@ common
   padding: 6%;
 }
 
+@media screen and (max-width: 767px) {
+  .inner {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+}
+
 .logo {
   display: block;
   width: 30px;
@@ -254,12 +269,25 @@ common
   width: 65%;
 }
 
+@media screen and (max-width: 767px) {
+  .logo {
+    width: 23px;
+    height: 28px;
+  }
+}
+
 h2 {
   font-size: 40px;
   font-weight: 900;
   line-height: 1.5;
   letter-spacing: 0.05em;
   margin-bottom: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  h2 {
+    font-size: 8vw;
+  }
 }
 
 .btn-area {
@@ -335,11 +363,11 @@ header .inner .logo .logo-o {
           animation: ringStrikeOut 0.6s cubic-bezier(0.07, 0.79, 0.39, 0.96) forwards;
 }
 
-header .inner .logo:hover {
+header .inner .logo:hover, header .inner .logo:active {
   opacity: 1;
 }
 
-header .inner .logo:hover .logo-o {
+header .inner .logo:hover .logo-o, header .inner .logo:active .logo-o {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transform-origin: top right;
@@ -410,12 +438,26 @@ header .inner .pnkz a::after {
   transition: all 0.2s;
 }
 
-header .inner .pnkz a:hover {
+header .inner .pnkz a:hover, header .inner .pnkz a:active {
   opacity: 1;
 }
 
-header .inner .pnkz a:hover::after {
+header .inner .pnkz a:hover::after, header .inner .pnkz a:active::after {
   width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    height: 60px;
+  }
+  header .inner .logo {
+    top: 16px;
+    -webkit-transform: translate(-20px, 0px);
+            transform: translate(-20px, 0px);
+  }
+  header .inner .pnkz a {
+    font-size: 12px;
+  }
 }
 
 @-webkit-keyframes ringStrike {
@@ -606,14 +648,18 @@ nav
 }
 
 #Globalnav input:focus + #Globalnav label .burger,
-#Globalnav label:hover .burger {
+#Globalnav label:hover .burger,
+#Globalnav label:active .burger {
   opacity: 1;
 }
 
 #Globalnav input:focus + #Globalnav label .burger .bar, #Globalnav input:focus + #Globalnav label .burger::before, #Globalnav input:focus + #Globalnav label .burger::after,
 #Globalnav label:hover .burger .bar,
 #Globalnav label:hover .burger::before,
-#Globalnav label:hover .burger::after {
+#Globalnav label:hover .burger::after,
+#Globalnav label:active .burger .bar,
+#Globalnav label:active .burger::before,
+#Globalnav label:active .burger::after {
   background-color: red;
 }
 
@@ -684,12 +730,12 @@ nav
   position: relative;
 }
 
-#Globalnav nav a:hover {
+#Globalnav nav a:hover, #Globalnav nav a:active {
   font-weight: 900;
   opacity: 1;
 }
 
-#Globalnav nav a:hover .glitch {
+#Globalnav nav a:hover .glitch, #Globalnav nav a:active .glitch {
   font-weight: 900;
   opacity: 1;
 }
@@ -727,7 +773,7 @@ nav
   opacity: 0.1;
 }
 
-#Globalnav [id='navcheck']:checked + label .burger:hover {
+#Globalnav [id='navcheck']:checked + label .burger:hover, #Globalnav [id='navcheck']:checked + label .burger:active {
   opacity: 0.6;
 }
 
@@ -741,6 +787,34 @@ nav
 #Globalnav [id='navcheck']:checked ~ nav a {
   -webkit-transform: translateX(0);
           transform: translateX(0);
+}
+
+@media screen and (max-width: 767px) {
+  #Globalnav label .burger {
+    top: 23px;
+    width: 22px;
+    height: 16px;
+  }
+  #Globalnav nav::after {
+    width: 120px;
+    height: 145px;
+    opacity: 0.07;
+  }
+  #Globalnav nav ul {
+    -webkit-transform: translate(55px, 0);
+            transform: translate(55px, 0);
+  }
+  #Globalnav nav ul li a {
+    font-size: 1.2em;
+  }
+  #Globalnav nav::after {
+    -webkit-transform: translate(-75%, -50%);
+            transform: translate(-75%, -50%);
+  }
+  #Globalnav [id='navcheck']:checked + label .burger {
+    -webkit-transform: scale(1.2) translate(100px, -85px);
+            transform: scale(1.2) translate(100px, -85px);
+  }
 }
 
 .giggle-wrap {
@@ -829,11 +903,11 @@ footer .inner .logo .logo-o {
           animation: ringStrikeOut 0.6s cubic-bezier(0.07, 0.79, 0.39, 0.96) forwards;
 }
 
-footer .inner .logo:hover {
+footer .inner .logo:hover, footer .inner .logo:active {
   opacity: 1;
 }
 
-footer .inner .logo:hover .logo-o {
+footer .inner .logo:hover .logo-o, footer .inner .logo:active .logo-o {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transform-origin: top right;
@@ -848,6 +922,12 @@ footer .inner .copyright {
   font-weight: normal;
   text-align: center;
   letter-spacing: 0.15em;
+}
+
+@media screen and (max-width: 767px) {
+  footer .inner .copyright {
+    font-size: 10px;
+  }
 }
 
 #to-top {
@@ -908,36 +988,54 @@ footer .inner .copyright {
   opacity: 0.6;
 }
 
-#to-top:hover {
+#to-top:hover, #to-top:active {
   border: none;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   opacity: 1;
 }
 
-#to-top:hover .beam {
+#to-top:hover .beam, #to-top:active .beam {
   opacity: 1;
 }
 
-#to-top:hover .beam span:nth-of-type(1) {
+#to-top:hover .beam span:nth-of-type(1), #to-top:active .beam span:nth-of-type(1) {
   -webkit-animation: beamShot 800ms infinite ease;
           animation: beamShot 800ms infinite ease;
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
 
-#to-top:hover .beam span:nth-of-type(2) {
+#to-top:hover .beam span:nth-of-type(2), #to-top:active .beam span:nth-of-type(2) {
   -webkit-animation: beamShot 800ms infinite ease;
           animation: beamShot 800ms infinite ease;
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
 
-#to-top:hover .beam span:nth-of-type(3) {
+#to-top:hover .beam span:nth-of-type(3), #to-top:active .beam span:nth-of-type(3) {
   -webkit-animation: beamShot 800ms infinite ease;
           animation: beamShot 800ms infinite ease;
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
+}
+
+@media screen and (max-width: 767px) {
+  #to-top {
+    width: 30px;
+    height: 30px;
+    bottom: 16px;
+    right: 15px;
+  }
+  #to-top img {
+    width: 36%;
+  }
+  #to-top .beam {
+    top: 0;
+  }
+  #to-top .beam span {
+    width: 10px;
+  }
 }
 
 @-webkit-keyframes beamShot {

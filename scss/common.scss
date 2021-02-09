@@ -74,6 +74,11 @@ body {
   font-weight: 300;
   letter-spacing: 0.05em;
   position: relative;
+  @include max-screen($bpMobile) {
+    min-width: 0;
+    color: red !important;
+    font-size: 14px;
+  }
 }
 * {
   color: #fff;
@@ -223,6 +228,10 @@ common
   width: 100%;
   height: 100%;
   padding: 6%;
+  @include max-screen($bpMobile) {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
 }
 
 .logo {
@@ -243,6 +252,10 @@ common
     left: 0;
     width: 65%;
   }
+  @include max-screen($bpMobile) {
+    width: 23px;
+    height: 28px;
+  }
 }
 
 h2 {
@@ -251,6 +264,9 @@ h2 {
   line-height: 1.5;
   letter-spacing: 0.05em;
   margin-bottom: 30px;
+  @include max-screen($bpMobile) {
+    font-size: 8vw;
+  }
 }
 
 .btn-area {
@@ -305,7 +321,8 @@ header {
         animation: ringStrikeOut 0.6s cubic-bezier(0.07, 0.79, 0.39, 0.96)
           forwards;
       }
-      &:hover {
+      &:hover,
+      &:active {
         opacity: 1;
         .logo-o {
           transform: rotate(0deg);
@@ -357,11 +374,26 @@ header {
           left: 0;
           transition: all 0.2s;
         }
-        &:hover {
+        &:hover,
+        &:active {
           opacity: 1;
           &::after {
             width: 100%;
           }
+        }
+      }
+    }
+  }
+  @include max-screen($bpMobile) {
+    height: 60px;
+    .inner {
+      .logo {
+        top: 16px;
+        transform: translate(-20px, 0px);
+      }
+      .pnkz {
+        a {
+          font-size: 12px;
         }
       }
     }
@@ -478,7 +510,8 @@ nav
     }
   }
   input:focus + #Globalnav label .burger,
-  label:hover .burger {
+  label:hover .burger,
+  label:active .burger {
     opacity: 1;
     .bar,
     &::before,
@@ -540,7 +573,8 @@ nav
   //Glitch effect
   nav {
     a {
-      &:hover {
+      &:hover,
+      &:active {
         font-weight: 900;
         opacity: 1;
         .glitch {
@@ -576,7 +610,8 @@ nav
           transform: scale(0.1);
           opacity: 0.1;
         }
-        &:hover {
+        &:hover,
+        &:active {
           opacity: 0.6;
         }
       }
@@ -587,6 +622,42 @@ nav
       transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
       a {
         transform: translateX(0);
+      }
+    }
+  }
+
+  @include max-screen($bpMobile) {
+    label {
+      .burger {
+        top: 23px;
+        width: 22px;
+        height: 16px;
+      }
+    }
+    nav {
+      &::after {
+        width: 120px;
+        height: 145px;
+        opacity: 0.07;
+        // background-color: red;
+      }
+      ul {
+        transform: translate(55px, 0);
+        li {
+          a {
+            font-size: 1.2em;
+          }
+        }
+      }
+      &::after {
+        transform: translate(-75%, -50%);
+      }
+    }
+    [id='navcheck']:checked {
+      + label {
+        .burger {
+          transform: scale(1.2) translate(100px, -85px);
+        }
       }
     }
   }
@@ -648,7 +719,8 @@ footer {
         animation: ringStrikeOut 0.6s cubic-bezier(0.07, 0.79, 0.39, 0.96)
           forwards;
       }
-      &:hover {
+      &:hover,
+      &:active {
         opacity: 1;
         .logo-o {
           transform: rotate(0deg);
@@ -664,6 +736,13 @@ footer {
       font-weight: normal;
       text-align: center;
       letter-spacing: 0.15em;
+    }
+  }
+  @include max-screen($bpMobile) {
+    .inner {
+      .copyright {
+        font-size: 10px;
+      }
     }
   }
 }
@@ -709,7 +788,8 @@ footer {
   &.fadein {
     opacity: 0.6;
   }
-  &:hover {
+  &:hover,
+  &:active {
     border: none;
     transform: scale(1.2);
     opacity: 1;
@@ -726,6 +806,21 @@ footer {
       span:nth-of-type(3) {
         animation: beamShot 800ms infinite ease;
         animation-delay: 0.2s;
+      }
+    }
+  }
+  @include max-screen($bpMobile) {
+    width: 30px;
+    height: 30px;
+    bottom: 16px;
+    right: 15px;
+    img {
+      width: 36%;
+    }
+    .beam {
+      top: 0;
+      span {
+        width: 10px;
       }
     }
   }
