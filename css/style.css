@@ -11,6 +11,12 @@ header .inner .logo {
   margin: auto;
 }
 
+@media screen and (max-width: 767px) {
+  .content {
+    max-width: initial;
+  }
+}
+
 #first-view {
   position: relative;
   height: 100vh;
@@ -43,6 +49,7 @@ header .inner .logo {
   text-align: center;
   font-size: 20px;
   letter-spacing: 0.18em;
+  margin-bottom: 0;
 }
 
 #first-view .effect {
@@ -168,6 +175,27 @@ header .inner .logo {
   }
 }
 
+@media screen and (max-width: 767px) {
+  #first-view .inner .content .logo {
+    width: 26%;
+    height: 0;
+    padding-top: 30.5%;
+    margin-bottom: 3%;
+  }
+  #first-view .inner .content p {
+    font-size: 4vw;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+  #first-view .effect {
+    -webkit-transform: translate(-43%, -59%);
+            transform: translate(-43%, -59%);
+    width: 40%;
+    height: 0;
+    padding-top: 40%;
+  }
+}
+
 #scroll-prompt {
   position: absolute;
   bottom: 120px;
@@ -194,6 +222,14 @@ header .inner .logo {
           animation: scroll_line 2.4s infinite;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
+}
+
+@media screen and (max-width: 767px) {
+  #scroll-prompt {
+    bottom: 60px;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+  }
 }
 
 @-webkit-keyframes scroll_line {
@@ -290,6 +326,41 @@ header .inner .logo {
   width: 100%;
 }
 
+@media screen and (max-width: 767px) {
+  #about .inner {
+    padding: 20% 10%;
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+  }
+  #about .inner .content .box {
+    width: 100%;
+  }
+  #about .inner .content h2 {
+    line-height: 1.4;
+    opacity: 0.8;
+    font-size: 7.4vw;
+  }
+  #about .inner .content .text {
+    font-size: 3.4vw;
+  }
+  #about .inner .content .profile {
+    padding-top: 4%;
+    margin-top: 4.7%;
+  }
+  #about .inner .content .profile p {
+    font-size: 3.4vw;
+    opacity: 0.8;
+  }
+  #about .inner .content .profile .role {
+    font-size: 3.5vw;
+    opacity: 1;
+  }
+  #about .inner .content .profile .name {
+    font-size: 4vw;
+    opacity: 1;
+  }
+}
+
 #works {
   background: url(../image/common/bg/ex-image03.jpg) no-repeat center;
   background-size: cover;
@@ -362,5 +433,39 @@ header .inner .logo {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   opacity: 1;
+}
+
+@media screen and (max-width: 767px) {
+  #works .inner {
+    padding: 15% 10% 18%;
+    display: block;
+  }
+  #works .inner .content .works-list {
+    padding: 0 0 0;
+    display: block;
+  }
+  #works .inner .content .works-list .works-image {
+    width: 100%;
+    margin: 0 auto 2%;
+  }
+  #works .inner .content .works-list .works-image .mockup {
+    width: 100%;
+  }
+  #works .inner .content .works-list .works-image .mockup.dev-pc {
+    background: url(../works/images/device-pc.svg) no-repeat center;
+    background-size: 100%;
+    padding: 8% 12% 10.5%;
+  }
+  #works .inner .content .works-list .works-image:hover {
+    opacity: 1;
+  }
+  #works .inner .content .works-list .works-image:hover .mockup {
+    opacity: 1;
+  }
+  #works .inner .content .works-list .works-image:hover .mockup img {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */
