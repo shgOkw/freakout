@@ -292,6 +292,8 @@ header .inner .logo {
       -ms-flex-align: center;
           align-items: center;
   background: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
 }
 
 #about .inner .content {
