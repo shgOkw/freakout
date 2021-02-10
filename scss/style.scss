@@ -256,6 +256,7 @@ header {
     }
   }
   @include max-screen($bpMobile) {
+    background-attachment: initial;
     .inner {
       padding: 20% 10%;
       backdrop-filter: blur(2px);
@@ -342,6 +343,7 @@ header {
     }
   }
   @include max-screen($bpMobile) {
+    background-attachment: initial;
     .inner {
       padding: 15% 10% 18%;
       display: block;

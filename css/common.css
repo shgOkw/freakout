@@ -141,14 +141,30 @@ Loading
 /* --------------------------------------------------------------------------------
 下層ページ
 --------------------------------------------------------------------------------*/
-#page-low.bg-fixed {
+#page-low.bg-fixed::before, #page-low.bg-fixed::after {
+  content: '';
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+#page-low.bg-fixed::before {
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+#page-low.bg-fixed::after {
   background: url(/image/common/bg/main-image.jpg) center no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  z-index: 0;
 }
 
 #page-low .wrapper {
-  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
 }
 
 .fxBlur .wrapper {
@@ -889,6 +905,8 @@ footer
 footer {
   background: rgba(0, 0, 0, 0.5);
   width: 100%;
+  z-index: 2;
+  position: relative;
 }
 
 footer .inner .logo {
@@ -1024,10 +1042,10 @@ footer .inner .copyright {
 
 @media screen and (max-width: 767px) {
   #to-top {
-    width: 30px;
-    height: 30px;
-    bottom: 16px;
-    right: 15px;
+    width: 45px;
+    height: 45px;
+    bottom: 25px;
+    right: 25px;
   }
   #to-top img {
     width: 36%;
