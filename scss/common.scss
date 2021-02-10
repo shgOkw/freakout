@@ -161,8 +161,7 @@ Loading
 --------------------------------------------------------------------------------*/
 #page-low {
   &.bg-fixed {
-    background: url(http://localhost/freakout/image/common/bg/main-image.jpg)
-      center no-repeat;
+    background: url(/image/common/bg/main-image.jpg) center no-repeat;
     background-size: cover;
     background-attachment: fixed;
   }

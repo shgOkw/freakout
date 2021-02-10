@@ -83,7 +83,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -472,14 +472,18 @@
     width: 100%;
     padding-top: 0;
   }
-  #career .career-area tbody .title .date {
+  #career .career-area tbody .title {
     vertical-align: top;
-    padding-top: 2px;
+    line-height: 1.6;
+  }
+  #career .career-area tbody .title .date {
+    padding-top: 4.5px;
     width: 75px;
     font-size: 13px;
     font-weight: 300;
   }
   #career .career-area tbody .title .com-name {
+    padding-top: 2px;
     font-weight: 400;
   }
   #career .career-area tbody .detail .text {
