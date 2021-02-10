@@ -21,8 +21,10 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="http://localhost/freakout/css/normalize.css" />
-    <link rel="stylesheet" href="../css/photoswipe/photoswipe.css" />
-    <link rel="stylesheet" href="../css/photoswipe/default-skin.css" />
+    <link
+      rel="stylesheet"
+      href="http://localhost/freakout/css/jquery.fancybox.css"
+    />
     <link rel="stylesheet" href="http://localhost/freakout/css/common.css" />
     <link rel="stylesheet" href="http://localhost/freakout/css/about.css" />
   </head>
@@ -130,90 +132,125 @@
             <div class="content">
               <h2>About</h2>
               <div class="detail fx-fadeUp">
-                <div class="photo-box my-gallery">
-                  <figure class="trigger">
-                    <a
-                      href="./image/gallery/01.jpg"
-                      data-size="1000x800"
-                      class="photo-thmb"
-                    >
-                      <img src="./image/gallery/01.jpg" alt="" class="thmb" />
-                      <p class="btn-text">
-                        <span>Gallery</span>
-                        <img
-                          src="../image/common/btn/icon-photo.svg"
-                          class="icon"
-                        />
-                      </p>
-                    </a>
-                    <figcaption>
-                      たまに沖縄に行きます
-                      <span>Okinawa</span>
-                    </figcaption>
-                  </figure>
-                  <figure>
-                    <a href="./image/gallery/02.jpg" data-size="1000x800">
-                      <img src="./image/gallery/02.jpg" alt="" />
-                    </a>
-                    <figcaption>
-                      青い海と空
-                      <span>Okinawa</span>
-                    </figcaption>
-                  </figure>
-                  <figure>
-                    <a href="./image/gallery/03.jpg" data-size="800x1000">
-                      <img src="./image/gallery/03.jpg" alt="" />
-                    </a>
-                    <figcaption>
-                      沖縄の城跡のイス？で休憩
-                      <span>Okinawa</span>
-                    </figcaption>
-                  </figure>
-                  <figure>
-                    <a href="./image/gallery/04.jpg" data-size="800x1000">
-                      <img src="./image/gallery/04.jpg" alt="" />
-                    </a>
-                    <figcaption>
-                      巨大ガジュマルのパワー
-                      <span>Okinawa</span>
-                    </figcaption>
-                  </figure>
-                  <figure>
-                    <a href="./image/gallery/05.jpg" data-size="1000x800">
-                      <img src="./image/gallery/05.jpg" alt="" />
-                    </a>
-                    <figcaption>
-                      ソーキソバを堪能
-                      <span>Okinawa</span>
-                    </figcaption>
-                  </figure>
-                  <figure>
-                    <a href="./image/gallery/06.jpg" data-size="800x1000">
-                      <img src="./image/gallery/06.jpg" alt="" />
-                    </a>
-                    <figcaption>
-                      昔バンドマンでした
-                      <span>Live House</span>
-                    </figcaption>
-                  </figure>
-                  <figure>
-                    <a href="./image/gallery/07.jpg" data-size="1000x800">
-                      <img src="./image/gallery/07.jpg" alt="" />
-                    </a>
-                    <figcaption>
-                      沖縄の猫はゆるい
-                      <span>Okinawa</span>
-                    </figcaption>
-                  </figure>
-                  <figure>
-                    <a href="./image/gallery/08.jpg" data-size="1000x800">
-                      <img src="./image/gallery/08.jpg" alt="" />
-                    </a>
-                    <figcaption>
-                      おわりです。ありがとうございました。
-                      <span>Ghibli Expo Roppongi Hills</span>
-                    </figcaption>
-                  </figure>
+                <div class="photo-box">
+                  <ul class="gallery">
+                    <li class="thmb trigger">
+                      <figure>
+                        <a
+                          href="image/gallery/01.jpg"
+                          data-fancybox="my-gallery"
+                        >
+                          <img src="image/gallery/01.jpg" />
+                        </a>
+                        <figcaption class="caption-hidden">
+                          <span class="message">たまに沖縄に行きます</span>
+                          <span class="location">Okinawa</span>
+                        </figcaption>
+                      </figure>
+                    </li>
+                    <li>
+                      <figure>
+                        <a
+                          href="image/gallery/02.jpg"
+                          data-fancybox="my-gallery"
+                        >
+                          <img src="image/gallery/02.jpg" />
+                        </a>
+                        <figcaption class="caption-hidden">
+                          <span class="message">青い海と空</span>
+                          <span class="location">Okinawa</span>
+                        </figcaption>
+                      </figure>
+                    </li>
+                    <li>
+                      <figure>
+                        <a
+                          href="image/gallery/03.jpg"
+                          data-fancybox="my-gallery"
+                        >
+                          <img src="image/gallery/03.jpg" />
+                        </a>
+                        <figcaption class="caption-hidden">
+                          <span class="message">沖縄の城跡</span>
+                          <span class="location">Okinawa</span>
+                        </figcaption>
+                      </figure>
+                    </li>
+                    <li>
+                      <figure>
+                        <a
+                          href="image/gallery/04.jpg"
+                          data-fancybox="my-gallery"
+                        >
+                          <img src="image/gallery/04.jpg" />
+                        </a>
+                        <figcaption class="caption-hidden">
+                          <span class="message">巨大ガジュマルのパワー</span>
+                          <span class="location">Okinawa</span>
+                        </figcaption>
+                      </figure>
+                    </li>
+                    <li>
+                      <figure>
+                        <a
+                          href="image/gallery/05.jpg"
+                          data-fancybox="my-gallery"
+                        >
+                          <img src="image/gallery/05.jpg" />
+                        </a>
+                        <figcaption class="caption-hidden">
+                          <span class="message">ソーキソバを堪能</span>
+                          <span class="location">Okinawa</span>
+                        </figcaption>
+                      </figure>
+                    </li>
+                    <li>
+                      <figure>
+                        <a
+                          href="image/gallery/06.jpg"
+                          data-fancybox="my-gallery"
+                        >
+                          <img src="image/gallery/06.jpg" />
+                        </a>
+                        <figcaption class="caption-hidden">
+                          <span class="message">昔バンドマンでした</span>
+                          <span class="location">Live House</span>
+                        </figcaption>
+                      </figure>
+                    </li>
+                    <li>
+                      <figure>
+                        <a
+                          href="image/gallery/07.jpg"
+                          data-fancybox="my-gallery"
+                        >
+                          <img src="image/gallery/07.jpg" />
+                        </a>
+                        <figcaption class="caption-hidden">
+                          <span class="message">沖縄の猫はゆるい</span>
+                          <span class="location">Okinawa</span>
+                        </figcaption>
+                      </figure>
+                    </li>
+                    <li>
+                      <figure>
+                        <a
+                          href="image/gallery/08.jpg"
+                          data-fancybox="my-gallery"
+                        >
+                          <img src="image/gallery/08.jpg" />
+                        </a>
+                        <figcaption class="caption-hidden">
+                          <span class="message"
+                            >おわりです。ありがとうございました。</span
+                          >
+                          <span class="location"
+                            >Ghibli Expo Roppongi Hills</span
+                          >
+                        </figcaption>
+                      </figure>
+                    </li>
+                  </ul>
                 </div>
                 <div class="prof-box">
                   <p class="name-area">
@@ -776,13 +813,14 @@
     <!-- end Font Awesome -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../js/jquery.waypoints.min.js"></script>
-    <script src="../js/photoswipe/photoswipe.min.js"></script>
+    <!-- <script src="../js/photoswipe/photoswipe.min.js"></script>
     <script src="../js/photoswipe/photoswipe-ui-default.min.js"></script>
-    <script src="../js/photoswipe/photoswipe-setup.js"></script>
+    <script src="../js/photoswipe/photoswipe-setup.js"></script> -->
+    <script src="http://localhost/freakout/js/jquery.fancybox.js"></script>
     <script src="http://localhost/freakout/js/main.js"></script>
 
     <!-- photoswipe default skin -->
-    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="pswp__bg"></div>
       <div class="pswp__scroll-wrap">
         <div class="pswp__container">
@@ -835,6 +873,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
+    <!-- end -->
   </body>
 </html>

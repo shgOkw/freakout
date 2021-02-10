@@ -20,6 +20,15 @@ $(function () {
   });
 });
 
+// fancybox
+$(function () {
+  $('[data-fancybox="my-gallery"]').fancybox({
+    caption: function (instance, current) {
+      return $(this).next('figcaption').html();
+    },
+  });
+});
+
 // スクロールに応じてクラスを付与
 const updateButton = () => {
   if ($(window).scrollTop() >= 300) {

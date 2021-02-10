@@ -24,7 +24,6 @@ body {
 @media screen and (max-width: 767px) {
   body {
     min-width: 0;
-    color: red !important;
     font-size: 14px;
   }
 }
