@@ -1,67 +1,42 @@
 @charset "utf-8";
 
-$fontColor: #666;
-$catImageSize: 22%;
-$userImageSize: 160px;
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-display: swap;
+  font-weight: 300;
+  src: url('/font/NotoSansJP-Light.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-display: swap;
+  font-weight: 400;
+  src: url('/font/NotoSansJP-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-display: swap;
+  font-weight: 500;
+  src: url('/font/NotoSansJP-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-display: swap;
+  font-weight: 900;
+  src: url('/font/NotoSansJP-Black.woff2') format('woff2');
+}
 
-//breakpoint
-// $bpMobile: 767px;
-// @mixin max-screen($break-point) {
-//   @media screen and (max-width: $break-point) {
-//     @content;
-//   }
-// }
 @import 'breakpoint';
 
 /* --------------------------------------------------------------------------------
 pointer
 --------------------------------------------------------------------------------*/
-// body,
-// a,
-// label,
-// button,
-// span,
-// img {
-//   cursor: none;
-// }
-// .cursor {
-//   width: 12px;
-//   height: 12px;
-//   background-color: rgba(255, 238, 0, 0.9);
-//   z-index: 9999;
-//   border-radius: 50%;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   cursor: none;
-//   pointer-events: none;
-//   transition: transform 0.2s;
-// }
-// .cursor.on-mouse {
-//   transform: scale(1.5);
-//   background-color: transparent;
-//   border: 1px solid rgba(255, 238, 0, 0.9);
-// }
-// .cursor.on-mouse::after {
-//   content: '';
-//   width: 1px;
-//   height: 10px;
-//   background-color: rgba(255, 238, 0, 0.9);
-//   display: block;
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   margin: 0 0 0 -1px;
-//   transform: rotate(-35deg);
-//   transform-origin: top;
-// }
+
 .cursor {
   display: none;
 }
 /* end pointer */
 
 body {
-  // background-color: #213751;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -83,7 +58,6 @@ body {
 * {
   color: #fff;
   background-repeat: no-repeat;
-  // cursor: url(../image/common/btn/icon-link.svg), pointer;
 }
 a {
   color: #fff;
@@ -587,7 +561,6 @@ nav
           font-size: 1.3em;
           text-align: center;
           letter-spacing: 0.2em;
-          font-weight: 100;
           position: relative;
         }
       }

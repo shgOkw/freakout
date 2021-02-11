@@ -148,7 +148,7 @@
             }
             dt {
               font-size: 14px;
-              font-weight: 100;
+              font-weight: 300;
               width: 100px;
               text-align: center;
               background: rgba(255, 255, 255, 0.13);
@@ -250,7 +250,6 @@
         content: '＃';
         opacity: 0.6;
         font-size: 1.2em;
-        font-weight: 100;
         font-style: italic;
         transform: translateY(0.1em);
         display: inline-block;
@@ -335,7 +334,7 @@
           text-align: right;
           padding-right: 1em;
           font-size: 15px;
-          font-weight: 100;
+          font-weight: 300;
         }
         .com-name {
           font-size: 15px;
@@ -362,8 +361,8 @@
           p {
             margin: 0;
             font-size: 14px;
-            font-weight: 100;
             line-height: 1.5;
+            opacity: 0.9;
           }
         }
       }
