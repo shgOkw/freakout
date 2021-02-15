@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import 'breakpoint';
+@import '../../scss/breakpoint';
 
 .web-closed-text {
   color: #ff1010;
@@ -89,13 +89,13 @@
         .mockup {
           width: 81%;
           &.dev-pc {
-            background: url(../works/images/device-pc.svg) no-repeat center;
+            background: url(/works/images/device-pc.svg) no-repeat center;
             background-size: 100%;
             padding: 6% 9% 8.5%;
           }
           &.dev-mbl {
             width: 18%;
-            background: url(../works/images/device-mbl.svg) no-repeat center;
+            background: url(/works/images/device-mbl.svg) no-repeat center;
             background-size: contain;
             padding: 3% 2%;
             transform: translate(-9%, -10%);
@@ -170,8 +170,7 @@
             }
             &::after {
               content: '';
-              background: url(../image/common/btn/icon-link.svg) no-repeat
-                center;
+              background: url(/image/common/btn/icon-link.svg) no-repeat center;
               background-size: 100%;
               width: 15px;
               height: 14px;
@@ -184,7 +183,7 @@
             }
             &.show-modal {
               &::after {
-                background-image: url(../image/common/btn/icon-photo.svg);
+                background-image: url(/image/common/btn/icon-photo.svg);
                 width: 15px;
                 height: 14px;
               }

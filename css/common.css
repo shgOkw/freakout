@@ -964,15 +964,27 @@ footer .inner .logo:hover .logo-o, footer .inner .logo:active .logo-o {
 }
 
 footer .inner .copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer .inner .copyright a {
+  display: block;
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.6);
   font-weight: normal;
   text-align: center;
   letter-spacing: 0.15em;
 }
 
 @media screen and (max-width: 767px) {
-  footer .inner .copyright {
+  footer .inner .copyright a {
     font-size: 10px;
   }
 }

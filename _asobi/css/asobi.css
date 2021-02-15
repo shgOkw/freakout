@@ -1,0 +1,27 @@
+#asobi {
+  position: relative;
+}
+
+#asobi h2 {
+  margin-bottom: 7%;
+}
+
+#asobi .inner {
+  padding-top: 16%;
+  padding-bottom: 10%;
+}
+
+#asobi .content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+#asobi .content .box {
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 4%;
+}
+
+#asobi .content .box:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+/*# sourceMappingURL=asobi.css.map */

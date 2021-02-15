@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import 'breakpoint';
+@import '../../scss/breakpoint';
 
 #about,
 #career,
@@ -83,7 +83,7 @@
                 left: 50%;
                 margin: -11px 0 0 -36px;
                 text-align: center;
-                background: url(../image/common/btn/icon-photo.svg) no-repeat
+                background: url(/image/common/btn/icon-photo.svg) no-repeat
                   center right;
                 background-size: 14px;
                 padding: 0 1.4em 0 0;
